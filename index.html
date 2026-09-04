@@ -27,7 +27,6 @@
             background-color: #fff;
         }
 
-        /* Utilidades */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -45,7 +44,6 @@
         }
         .text-white .section-title, .section-title.text-white { color: #fff; }
         
-        /* Botones */
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -68,7 +66,6 @@
             width: 100%;
         }
 
-        /* Navbar */
         #navbar {
             position: fixed;
             top: 0;
@@ -118,7 +115,6 @@
             cursor: pointer;
         }
 
-        /* Hero / Inicio */
         #inicio {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
@@ -139,7 +135,6 @@
             margin-bottom: 30px;
         }
 
-        /* Carta / Tabs */
         #carta {
             padding: 80px 0;
         }
@@ -179,7 +174,6 @@
         .menu-item-title { font-weight: bold; }
         .menu-item-price { color: var(--primary-color); font-weight: bold; }
 
-        /* Galería */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -199,7 +193,6 @@
             transform: scale(1.03);
         }
 
-        /* Lightbox */
         #lightbox {
             display: none;
             position: fixed;
@@ -243,8 +236,7 @@
             cursor: pointer;
         }
 
-        /* About & Location */
-        .about-section, .location-section { padding: 80px 0; }
+        .about-section, .location-section, .reviews-section { padding: 80px 0; }
         .about-grid, .location-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -252,8 +244,60 @@
             align-items: center;
         }
         .about-image img { width: 100%; border-radius: 8px; }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .review-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top: 4px solid var(--primary-color);
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .review-author {
+            font-weight: bold;
+            font-size: 1.05rem;
+            color: var(--dark-color);
+        }
+        .badge {
+            font-size: 0.75rem;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 12px;
+            color: #666;
+            margin-left: 5px;
+        }
+        .stars {
+            color: #f39c12;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+        .review-text {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .review-meta {
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
         
-        /* Reservas */
         .reservation-section {
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1414235077428-338988a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
             padding: 80px 0;
@@ -288,7 +332,6 @@
         }
         .hidden { display: none; }
 
-        /* Footer */
         .footer { padding: 50px 0 20px; }
         .footer-content {
             display: flex;
@@ -309,7 +352,6 @@
         .footer-links a:hover { color: var(--primary-color); }
         .social-link { color: var(--primary-color); text-decoration: none; font-weight: bold; }
         
-        /* Animaciones Fade-in */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -325,7 +367,6 @@
             to { opacity: 1; }
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             #menu-toggle { display: block; }
             #nav-links {
@@ -357,6 +398,7 @@
                 <li><a href="#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                 <li><a href="#carta" class="nav-link">Carta</a></li>
+                <li><a href="#opiniones" class="nav-link">Opiniones</a></li>
                 <li><a href="#reservas" class="nav-link">Reservas</a></li>
             </ul>
         </div>
@@ -414,7 +456,6 @@
         </div>
     </section>
 
-    <!-- Galería -->
     <div class="gallery-grid fade-in">
         <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plato 1" class="gallery-img">
         <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plato 2" class="gallery-img">
@@ -422,7 +463,6 @@
         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plato 4" class="gallery-img">
     </div>
 
-    <!-- Lightbox -->
     <div id="lightbox">
         <span class="close-lightbox">&times;</span>
         <div class="lightbox-controls">
@@ -440,6 +480,100 @@
             </div>
             <div class="about-image">
                 <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior Referencial Amandine">
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section bg-light" id="opiniones">
+        <div class="container fade-in">
+            <h2 class="section-title text-center">Lo que dicen nuestros clientes</h2>
+            <p class="text-center" style="color: #666; margin-bottom: 30px;">Reseñas reales verificadas de Google Maps</p>
+            
+            <div class="reviews-grid">
+                
+                <div class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div>
+                                <span class="review-author">Ricardo Ochoa</span>
+                                <span class="badge">Local Guide</span>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Acogedor, cómodo y cuidado ambiente. Fuimos con mi señora a cenar, y desde la entrada hasta el postre todo estuvo muy bien preparado y sabroso. La recomendación del vino que nos hicieron estuvo muy acertada."</p>
+                    </div>
+                    <div class="review-meta">Tipo de comida: Cena</div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div>
+                                <span class="review-author">Roxana Cofré</span>
+                                <span class="badge">Local Guide</span>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Un día jueves optamos por un menú de degustación de trufas de 5 tiempos, es pura elegancia francesa pero con alma Chilena. El lugar es muy acogedor, tiene una barra muy bonita y no pasamos nada de frío."</p>
+                    </div>
+                    <div class="review-meta">Tipo de comida: Cena</div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div>
+                                <span class="review-author">Daniela Ayala</span>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Fuimos a Amandine Bistró y la experiencia fue simplemente maravillosa. Pedí chateaubriand en punto blue, y el chef Alejandro lo preparó perfecto. Todo fue perfecto: la comida, la atención y el ambiente."</p>
+                    </div>
+                    <div class="review-meta">Tipo de comida: Cena</div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div>
+                                <span class="review-author">Aaron Alemán</span>
+                                <span class="badge">Local Guide</span>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"En mi visita a Santiago, comí en este restaurante y tuve una excelente experiencia. Me atendió Joandra, quien fue muy amable y me explicó toda la carta con detalle. ¡Lo recomiendo al 100%!"</p>
+                    </div>
+                    <div class="review-meta">Tipo de comida: Cena</div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div>
+                                <span class="review-author">Marco Romero</span>
+                                <span class="badge">Local Guide</span>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"La atención excelente, los mozos muy atentos y conocen perfectamente la carta. La comida estupenda, bien preparada y con una muy bien lograda presentación. Probé ostras y pechuga de pato, deliciosos."</p>
+                    </div>
+                    <div class="review-meta">Tipo de comida: Comida</div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div>
+                                <span class="review-author">María Jesús Irarrázaval</span>
+                                <span class="badge">Local Guide</span>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Este restaurante es una joya y tiene otro nivel culinario. Realmente todo de calidad y preparado a la perfección en tiempos de cocción, temperaturas y combinación de sabores. Muy atento el personal."</p>
+                    </div>
+                    <div class="review-meta">Tipo de comida: Cena</div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -511,6 +645,7 @@
                 <h2>Amandine <span>Bistró</span></h2>
             </div>
             <div class="footer-links">
+                <a href="#opiniones">Opiniones</a>
                 <a href="#reservas">Reservas</a>
                 <a href="#carta">Carta</a>
                 <a href="https://maps.app.goo.gl/qTSZTPQ7xcDCY4hLA?g_st=ac" target="_blank">Google Maps</a>
